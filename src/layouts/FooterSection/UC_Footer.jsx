@@ -6,7 +6,7 @@ import '../../styles/common.css'
 function UC_Footer() {
   return (
     <div className="lightTheme footer">
-      <FaRegCopyright /> @2024 Ayush Jain
+      <FaRegCopyright /> 2024 Ayush Jain
     </div>
   )
 }
