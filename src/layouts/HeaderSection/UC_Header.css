@@ -1,0 +1,48 @@
+/* UC_Header.css */
+
+.appbar {
+    background-color: #1976d2;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.typography {
+    display: none;
+}
+
+.typography--sm {
+    display: block;
+}
+
+.iconButton {
+    color: white;
+}
+
+.flexGrow {
+    flex-grow: 1;
+}
+
+.iconButton--hidden-xs {
+    display: none;
+}
+
+.iconButton--visible-md {
+    display: flex;
+}
+
+@media (max-width: 600px) {
+    .typography {
+        display: none;
+    }
+
+    .iconButton--hidden-xs {
+        display: flex;
+    }
+
+    .iconButton--visible-md {
+        display: none;
+    }
+}

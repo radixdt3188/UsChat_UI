@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import UCFooter from "./layouts/FooterSection/UC_Footer.jsx";
+import UCHeader from "./layouts/HeaderSection/UC_Header.jsx";
+import Dashboard from "./layouts/Dashboard/Dashboard.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        {/* Header Section */}
+        <UCHeader />
+
+        <main className="layout">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+
+        {/* Footer Section */}
+        <UCFooter />
+      </div>
+    </Router>
   );
 }
 

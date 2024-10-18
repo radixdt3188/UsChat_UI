@@ -1,0 +1,17 @@
+.LightTheme { 
+    background-color: #1976d2;
+    color: white;
+}
+
+.Footer {
+    width: 100%;
+    align-items: center;
+}
+
+.layout {
+    height: 100%;
+    width: 100%;
+    padding-top: 0.1%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
