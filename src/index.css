@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  min-height: 100vh;
+  /* display: flex; */
+  background-image: url("./assets//Images//UC_Background.jpg");
+  background-position: center;
+  background-size: cover;
+}

@@ -1,0 +1,23 @@
+.imageIcon {
+    width: 30%;
+    /* Width of the image */
+    height: 30%;
+    /* Height of the image */
+    padding: 3%;
+    /* Padding around the image */
+    display: block;
+    /* Ensures it's treated as a block element */
+    margin: 0 auto;
+    /* Centers the image horizontally */
+}
+
+.centeredContainer {
+    display: flex;
+    /* Use Flexbox for centering */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    height: 100vh;
+    /* Full viewport height for vertical centering */
+}

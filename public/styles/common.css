@@ -1,0 +1,64 @@
+.LightTheme {
+    background-color: #1976d2;
+    color: white;
+}
+
+.Footer {
+    width: 100%;
+    align-items: center;
+}
+
+.layout {
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBG {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 100%;
+    width: 95%;
+}
+
+.LoginRegisterForm {
+    width: 90%;
+    /* Adjusted for better responsiveness */
+    max-width: 600px;
+    /* Set a max-width for larger screens */
+    min-height: 95%;
+    background-color: white;
+    box-shadow: 2px 2px 4px #000000;
+    border-radius: 10px;
+}
+
+.LoginRegister_Tabs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+}
+
+.alignCenter {
+    display: flex;
+    justify-content: center;
+}
+
+/* Height */
+.fullHeight {
+    height: 100%;
+}
+
+.threeQuarterHeight {
+    height: 75%;
+}
+
+.halfHeight {
+    height: 50%;
+}
