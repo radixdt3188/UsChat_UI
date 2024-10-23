@@ -13,14 +13,14 @@ const NotFound = () => {
                 }, 1000)
             }
             else {
-                navigate('/');
+                navigate("/");
             }
         }
         counter();
     }, [navigate, countdown]);
 
   return (
-    <div>
+    <div className="PageNotFound">
       <h1>404 - Page Not Found</h1>
       <p>Oops! The page you are looking for does not exist.</p>
       <p>You are beeing re redirected to home page in {countdown}.</p>

@@ -1,10 +1,29 @@
 import React from "react";
 
 import { CheckBox } from "@mui/icons-material";
-import { Button, FormControl, Grid, Link, TextField } from "@mui/material";
+import { Button, FormControl, Grid, InputLabel, Link, TextField } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import InputAdornment from "@mui/material/InputAdornment";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import "./LoginPage.css";
 
 function RegisterPage() {
+  const [showPassword1, setShowPassword1] = React.useState(false);
+  const [showPassword2, setShowPassword2] = React.useState(false);
+
+  const handleClickShowPassword1 = () => setShowPassword1((show) => !show);
+  const handleClickShowPassword2 = () => setShowPassword2((show) => !show);
+
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
+
+  const handleMouseUpPassword = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div>
       <img
@@ -48,28 +67,62 @@ function RegisterPage() {
             />
           </Grid>
           <Grid item xs={12}>
-            <TextField
-              variant="outlined"
-              required
-              fullWidth
-              name="password1"
-              label="Password"
-              type="password"
-              id="password1"
-              autoComplete="current-password"
-            />
+            <FormControl sx={{ width: "100%" }} variant="outlined">
+              <InputLabel htmlFor="outlined-adornment-password">
+                Password
+              </InputLabel>
+              <OutlinedInput
+                id="outlined-adornment-password"
+                type={showPassword1 ? "text" : "password"}
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label={
+                        showPassword1
+                          ? "hide the password"
+                          : "display the password"
+                      }
+                      onClick={handleClickShowPassword1}
+                      onMouseDown={handleMouseDownPassword}
+                      onMouseUp={handleMouseUpPassword}
+                      edge="end"
+                    >
+                      {showPassword1 ? <VisibilityOff /> : <Visibility />}
+                    </IconButton>
+                  </InputAdornment>
+                }
+                label="Password"
+              />
+            </FormControl>
           </Grid>
           <Grid item xs={12}>
-            <TextField
-              variant="outlined"
-              required
-              fullWidth
-              name="passwod2"
-              label="Reenter Password"
-              type="password"
-              id="password2"
-              autoComplete="current-password"
-            />
+            <FormControl sx={{ width: "100%" }} variant="outlined">
+              <InputLabel htmlFor="outlined-adornment-password">
+                Password
+              </InputLabel>
+              <OutlinedInput
+                id="outlined-adornment-password"
+                type={showPassword2 ? "text" : "password"}
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label={
+                        showPassword2
+                          ? "hide the password"
+                          : "display the password"
+                      }
+                      onClick={handleClickShowPassword2}
+                      onMouseDown={handleMouseDownPassword}
+                      onMouseUp={handleMouseUpPassword}
+                      edge="end"
+                    >
+                      {showPassword2 ? <VisibilityOff /> : <Visibility />}
+                    </IconButton>
+                  </InputAdornment>
+                }
+                label="Password"
+              />
+            </FormControl>
           </Grid>
           <Grid item xs={12}>
             <FormControl

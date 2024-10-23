@@ -45,6 +45,15 @@
     padding-top: 2%;
 }
 
+.PageNotFound {
+    background-color: white;
+    padding-left: 5%;
+    padding-bottom: 15px;
+    height: 80%;
+    width: 80%;
+    text-align: left;
+}
+
 .alignCenter {
     display: flex;
     justify-content: center;

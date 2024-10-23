@@ -16,7 +16,8 @@ function App() {
 
         <main className="layout">
           <Routes>
-            <Route exact path="/" element={<Dashboard />} />
+            <Route path="/" element={<LoginRegister />} />
+            <Route exact path="/Home" element={<Dashboard />} />
             <Route path="/SignIn" element={<LoginRegister />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
